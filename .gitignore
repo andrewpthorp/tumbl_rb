@@ -1,0 +1,7 @@
+*.gem
+*.rbc
+.DS_Store
+.bundle
+.rvmrc
+.swp
+Gemfile.lock
