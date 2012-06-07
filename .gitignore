@@ -5,3 +5,8 @@
 .rvmrc
 .swp
 Gemfile.lock
+
+coverage
+doc/
+pkg
+rdoc
