@@ -7,9 +7,12 @@ Gem::Specification.new do |s|
 
   s.authors     = ['Andrew Thorp']
   s.email       = ['andrewpthorp@gmail.com']
-  s.description = %q{Simple wrapper for the tumblr v2 API.}
-  s.summary     = s.description
   s.homepage    = 'http://github.com/andrewpthorp/tumbl_rb'
+  s.summary     = %q{Simple wrapper for the tumblr v2 API.}
+  s.description = <<-EOF
+    Tumblr is a "feature rich and free blog hosting platform."
+    Tumbl_rb is a ruby wrapper around v2 of the tumblr API.
+  EOF
 
   s.add_development_dependency 'json'
   s.add_development_dependency 'rake'
