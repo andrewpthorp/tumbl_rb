@@ -5,10 +5,6 @@ module TumblRb
     def initialize(options={})
     end
 
-    def speak_test(words)
-      puts "#{words}"
-    end
-
   end
 
 end
