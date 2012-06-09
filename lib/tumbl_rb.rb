@@ -1,6 +1,8 @@
+require 'tumbl_rb/configuration'
 require 'tumbl_rb/client'
 
 module TumblRb
+  extend Configuration
   class << self
     # Alias for TumblRb::Client.new
     #
