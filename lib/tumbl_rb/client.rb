@@ -10,6 +10,13 @@ module TumblRb
       end
     end
 
+    # Provides the URL for accessing the API
+    #
+    # @return [String]
+    def api_url
+      "http://api.tumblr.com/v2"
+    end
+
   end
 
 end
