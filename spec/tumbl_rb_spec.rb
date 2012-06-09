@@ -19,7 +19,9 @@ describe TumblRb do
   end
 
   describe ".delegate" do
-    it "should delegate missing methods to TumblRb::Client"
+    it "should delegate missing methods to TumblRb::Client" do
+      TumblRb.api_url.should == TumblRb::Client.new.api_url
+    end
   end
 
 end
