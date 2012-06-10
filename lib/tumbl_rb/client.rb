@@ -17,6 +17,13 @@ module TumblRb
       "http://api.tumblr.com/v2"
     end
 
+    # Determine if an oauth_token has been set
+    #
+    # @return [Boolean]
+    def oauthed?
+      !oauth_token.nil?
+    end
+
   end
 
 end

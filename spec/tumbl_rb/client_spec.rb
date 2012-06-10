@@ -22,4 +22,14 @@ describe TumblRb::Client do
     end
   end
 
+  describe "#oauthed?" do
+    it "should be false with a nil oauth_token" do
+      TumblRb::Client.new.oauthed?.should be_false
+    end
+
+    it "should be true when oauth_token is not nil" do
+      TumblRb::Client.new(:oauth_token => "1234567890").oauthed?.should be_true
+    end
+  end
+
 end
