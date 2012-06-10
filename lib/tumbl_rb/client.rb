@@ -14,7 +14,7 @@ module TumblRb
     #
     # @return [String]
     def api_url
-      "http://api.tumblr.com/v2"
+      "http://api.tumblr.com"
     end
 
     # Determine if an oauth_token has been set

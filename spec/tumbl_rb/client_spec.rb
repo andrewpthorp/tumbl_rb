@@ -17,8 +17,8 @@ describe TumblRb::Client do
   end
 
   describe "#api_url" do
-    it "should be set to http://api.tumblr.com/v2" do
-      TumblRb::Client.new.api_url.should == "http://api.tumblr.com/v2"
+    it "should be set to http://api.tumblr.com" do
+      TumblRb::Client.new.api_url.should == "http://api.tumblr.com"
     end
   end
 
