@@ -1,7 +1,6 @@
 # Tumbl_rb
-[![Build Status](https://secure.travis-ci.org/andrewpthorp/tumbl_rb.png)](http://travis-ci.org/andrewpthorp/tumbl_rb) [![Dependency Status](https://gemnasium.com/andrewpthorp/tumbl_rb.png)](https://gemnasium.com/andrewpthorp/tumbl_rb)
-
 Simple Ruby wrapper for the Tumblr v2 API
+[![Build Status](https://secure.travis-ci.org/andrewpthorp/tumbl_rb.png)](http://travis-ci.org/andrewpthorp/tumbl_rb) [![Dependency Status](https://gemnasium.com/andrewpthorp/tumbl_rb.png)](https://gemnasium.com/andrewpthorp/tumbl_rb)
 
 ## Installation
     none yet
