@@ -10,6 +10,13 @@ Simple Ruby wrapper for the Tumblr v2 API
     none yet
 
 ## Examples
+### Add your api_key (oauth_token)
+```ruby
+TumblRb.configure do |config|
+    config.oauth_token = "1234567890"
+end
+```
+
 ### Get a Blog's info
 ```ruby
 TumblRb.info("andrewpthorp")
