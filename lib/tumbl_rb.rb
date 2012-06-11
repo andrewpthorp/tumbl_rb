@@ -1,5 +1,6 @@
 require 'tumbl_rb/configuration'
 require 'tumbl_rb/client'
+require 'tumbl_rb/error'
 
 module TumblRb
   extend Configuration

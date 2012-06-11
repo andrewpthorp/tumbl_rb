@@ -1,3 +1,9 @@
+require 'tumbl_rb/connection'
+require 'tumbl_rb/request'
+require 'tumbl_rb/blog'
+
+require 'tumbl_rb/client/blogs'
+
 module TumblRb
 
   class Client
@@ -23,6 +29,11 @@ module TumblRb
     def oauthed?
       !oauth_token.nil?
     end
+
+    include TumblRb::Connection
+    include TumblRb::Request
+
+    include TumblRb::Client::Blogs
 
   end
 
