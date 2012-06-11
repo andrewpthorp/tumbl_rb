@@ -10,7 +10,11 @@ Simple Ruby wrapper for the Tumblr v2 API
     none yet
 
 ## Examples
-    none yet
+### Get a Blog's info
+```ruby
+TumblRb.info("andrewpthorp")
+=> #<Hashie::Mash meta=#<Hashie::Mash msg="OK" status=200> response=#<Hashie::Mash blog=#<Hashie::Mash ask=false description="Full stack web developer from Lynchbrg, VA." likes=1 name="andrewpthorp" posts=4 title="Andrew Thorp" updated=1339377610 url="http://andrewpthorp.tumblr.com/">>>
+```
 
 ## Inspiration
 Tumbl_rb was heavily inspired by [octokit][octokit] and [sqoot][sqoot]. Reading through
