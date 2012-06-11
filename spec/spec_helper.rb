@@ -8,3 +8,4 @@ end
 
 require 'tumbl_rb'
 require 'rspec'
+require 'webmock/rspec'
