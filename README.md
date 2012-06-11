@@ -10,6 +10,7 @@ Simple Ruby wrapper for the Tumblr v2 API
     none yet
 
 ## Examples
+
 ### Add your api_key (oauth_token)
 ```ruby
 TumblRb.configure do |config|
