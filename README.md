@@ -1,4 +1,4 @@
-# Tumbl_rb
+# Tumbl_rb [![Build Status](https://secure.travis-ci.org/andrewpthorp/tumbl_rb.png)](http://travis-ci.org/andrewpthorp/tumbl_rb)
 Simple Ruby wrapper for the Tumblr v2 API
 
 ## Installation
