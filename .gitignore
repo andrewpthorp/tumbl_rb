@@ -5,6 +5,8 @@
 .rvmrc
 .swp
 Gemfile.lock
+*~
+.yardoc
 
 coverage
 doc/
