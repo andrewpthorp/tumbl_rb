@@ -4,7 +4,7 @@ module TumblRb
 
       # Get the info of a blog
       #
-      # @param [String, Hash] the blog, hostname, or username
+      # @param [String, Hash] blog to get information for
       #
       # @return [Hashie::Mash]
       # @example
