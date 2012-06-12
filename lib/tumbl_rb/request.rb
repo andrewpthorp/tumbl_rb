@@ -2,13 +2,13 @@ require 'multi_json'
 
 module TumblRb
   module Request
-    def get(path, options={}, raw=false)
-      request(:get, path, options, raw)
+    def get(path, options={}, raw=false, include_meta=false)
+      request(:get, path, options, raw, include_meta)
     end
 
     private
 
-    def request(method, path, options, raw)
+    def request(method, path, options, raw, include_meta)
       response = connection(raw).send(method) do |request|
         request.url(path, options)
       end
@@ -16,7 +16,12 @@ module TumblRb
       if raw
         response
       else
-        response.body
+
+        if include_meta
+          response.body
+        else
+          response.body.response
+        end
       end
     end
 
