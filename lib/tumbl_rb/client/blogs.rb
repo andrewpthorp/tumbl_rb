@@ -21,8 +21,21 @@ module TumblRb
       # @return [Hashie::Mash]
       # @example
       #   TumblRb.avatar("andrewpthorp", 512)
-      def avatar(blog, size)
-        get("/v2/blog/#{Blog.new blog}/avatar/#{size}", false, false)
+      def avatar(blog, size=64)
+        get("/v2/blog/#{Blog.new blog}/avatar/#{size}", {}, false, false)
+      end
+
+      # Get the followers of a blog
+      #
+      # @param [String, Hash] blog to get followers of
+      # @param [Integer] number of results (1-20, defaults 20)
+      # @param [Integer] result to start at (defaults 0)
+      #
+      # @return [Hashie::Mash]
+      # @example
+      #   TumblRb.followers("andrewpthorp", 20, 0)
+      def followers(blog, limit=20, offset=0)
+        get("/v2/blog/#{Blog.new blog}/followers", { :limit => limit, :offset => offset }, false, false)
       end
 
     end
