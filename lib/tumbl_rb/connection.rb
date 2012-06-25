@@ -14,7 +14,7 @@ module TumblRb
         :url => api_url
       }
 
-      options.merge!(:params => { :api_key => oauth_token}) if oauthed?
+      options.merge!(:params => { :api_key => consumer_oauth_key}) if oauthed?
 
       connection = Faraday.new(options) do |builder|
         builder.request :url_encoded
