@@ -33,17 +33,21 @@ TumblRb.avatar("andrewpthorp")
 TumblRb.posts("andrewpthorp")
 ```
 
-Get all posts of a specific type (text, quote, link, answer, video, audio, photo, chat)
+### Get all posts of a specific type (text, quote, link, answer, video, audio, photo, chat)
 ```ruby
 TumblRb.posts("andrewpthorp", :type => "link")
 ```
 
-Get a specific post
+### Get a specific post
 ```ruby
 TumblRb.posts("andrewpthorp", :id => 123456789)
 ```
 
-Different types bring back different responses. To check them out, [visit the documentation](http://www.tumblr.com/docs/en/api/v2)
+**Different types bring back different responses. To check them out, [visit the documentation](http://www.tumblr.com/docs/en/api/v2)**
+
+### Version
+
+This gem supports the methods of the Tumblr API that do not require OAuth. This may change before v3 of the Tumblr API, and will definitely change after v3 of the Tumblr API.
 
 ## Inspiration
 Tumbl_rb was heavily inspired by [octokit][octokit] and [sqoot][sqoot]. Reading through
