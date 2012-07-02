@@ -4,25 +4,49 @@ Simple Ruby wrapper for the Tumblr v2 API
 [![Build Status](https://secure.travis-ci.org/andrewpthorp/tumbl_rb.png)](http://travis-ci.org/andrewpthorp/tumbl_rb) [![Dependency Status](https://gemnasium.com/andrewpthorp/tumbl_rb.png)](https://gemnasium.com/andrewpthorp/tumbl_rb)
 
 ## Installation
-    none yet
+    gem install 'tumbl_rb'
 
 ## Documentation
     none yet
 
 ## Examples
 
-### Add your api_key (oauth_token)
+### Add your api_key (consumer_oauth_key)
 ```ruby
 TumblRb.configure do |config|
-    config.oauth_token = "1234567890"
+    config.consumer_oauth_key = "1234567890"
 end
 ```
 
 ### Get a Blog's info
 ```ruby
 TumblRb.info("andrewpthorp")
-=> #<Hashie::Mash meta=#<Hashie::Mash msg="OK" status=200> response=#<Hashie::Mash blog=#<Hashie::Mash ask=false description="Full stack web developer from Lynchbrg, VA." likes=1 name="andrewpthorp" posts=4 title="Andrew Thorp" updated=1339377610 url="http://andrewpthorp.tumblr.com/">>>
 ```
+
+### Get a Blog's avatar
+```ruby
+TumblRb.avatar("andrewpthorp")
+```
+
+### Get Blog Posts
+```ruby
+TumblRb.posts("andrewpthorp")
+```
+
+### Get all posts of a specific type (text, quote, link, answer, video, audio, photo, chat)
+```ruby
+TumblRb.posts("andrewpthorp", :type => "link")
+```
+
+### Get a specific post
+```ruby
+TumblRb.posts("andrewpthorp", :id => 123456789)
+```
+
+**Different types bring back different responses. To check them out, [visit the documentation](http://www.tumblr.com/docs/en/api/v2)**
+
+## Version
+This gem supports the methods of the Tumblr API that do not require OAuth. This may change before v3 of the Tumblr API, and will definitely change after v3 of the Tumblr API.
 
 ## Inspiration
 Tumbl_rb was heavily inspired by [octokit][octokit] and [sqoot][sqoot]. Reading through

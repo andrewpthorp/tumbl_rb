@@ -23,11 +23,11 @@ module TumblRb
       "http://api.tumblr.com"
     end
 
-    # Determine if an oauth_token has been set
+    # Determine if an consumer_oauth_key has been set
     #
     # @return [Boolean]
     def oauthed?
-      !oauth_token.nil?
+      !consumer_oauth_key.nil?
     end
 
     include TumblRb::Connection

@@ -7,7 +7,7 @@ module TumblRb
       :adapter,
       :api_version,
       :proxy,
-      :oauth_token,
+      :consumer_oauth_key,
       :user_agent].freeze
 
     DEFAULT_ADAPTER        = Faraday.default_adapter
@@ -29,11 +29,11 @@ module TumblRb
     end
 
     def reset
-      self.adapter        = DEFAULT_ADAPTER
-      self.api_version    = DEFAULT_API_VERSION
-      self.oauth_token    = nil
-      self.proxy          = nil
-      self.user_agent     = DEFAULT_USER_AGENT
+      self.adapter                = DEFAULT_ADAPTER
+      self.api_version            = DEFAULT_API_VERSION
+      self.consumer_oauth_key     = nil
+      self.proxy                  = nil
+      self.user_agent             = DEFAULT_USER_AGENT
     end
   end
 end
