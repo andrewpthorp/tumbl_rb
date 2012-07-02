@@ -11,10 +11,12 @@ Simple Ruby wrapper for the Tumblr v2 API
 
 ## Examples
 
-### Add your api_key (consumer_oauth_key)
+### Global Configuration
 ```ruby
 TumblRb.configure do |config|
-    config.consumer_oauth_key = "1234567890"
+    config.consumer_oauth_key   = "1234567890" # API KEY
+    config.timeout              = 5 # OPEN/READ TIMEOUT
+    config.open_timeout         = 5 # OPEN TIMEOUT
 end
 ```
 
