@@ -35,4 +35,24 @@ describe TumblRb::Client do
     end
   end
 
+  describe "timeout" do
+    before do
+      @blog = "andrewpthorp.tumblr.com"
+    end
+
+    it "should raise an error when a timeout happens" do
+      client = TumblRb::Client.new(:timeout => 0, :open_timeout => 0)
+      lambda {
+        client.info(@blog)
+      }.should raise_error
+    end
+
+    it "should not raise an error when a timeout doesn't happen" do
+      stub_request(:get, "http://api.tumblr.com/v2/blog/#{@blog}/info").to_return(:body => fixture("info.json"))
+      client = TumblRb::Client.new
+      lambda {
+        client.info(@blog)
+      }.should_not raise_error
+    end
+  end
 end
